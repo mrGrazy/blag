@@ -2,6 +2,6 @@
   %section
     .h3= post.title
     .body= simple_format(markdown {post.body})
-    .meta updated #{time_ago_in_words(Time.parse(post._meta.updated_at))} ago
+    .meta updated #{Time.parse(post._meta.updated_at).strftime('%Y-%m-%d')}
 
 
