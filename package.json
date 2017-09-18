@@ -1,0 +1,11 @@
+{
+  "name": "blag",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mrGrazy/blag.git",
+  "author": "Andy Gray <mr.andy.gray@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "foundation-sites": "^6.4.3"
+  }
+}

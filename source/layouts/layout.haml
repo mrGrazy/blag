@@ -1,0 +1,23 @@
+!!! 5
+%html
+  %head
+    %meta{charset: 'utf-8'} 
+    %meta{'http-equiv': 'ie=edge'} 
+    %meta{'name': 'viewport', content: "width=device-width, initial-scale=1, shrink-to-fit=no"} 
+    %title= current_page.data.title || "Andy's Log"
+    = stylesheet_link_tag "site"
+    = javascript_include_tag "site"
+  %body
+    .container
+      .grid-x.grid-margin-x
+        .cell.small-3
+          .grid-y.grid-margin-y
+            .cell
+              = image_tag 'tree.png', class: 'float-center hero-img'
+            .cell
+              .site-name.text-center.h1.margin-bottom-0 ag
+              .site-subname.text-center andy creates
+
+            .cell
+        .cell.auto.page-content
+          = yield

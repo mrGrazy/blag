@@ -1,24 +1,28 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+$body-font-family: 'Goudy Bookletter 1911', serif;
+
+@import "foundation-sites/scss/foundation";
+@include foundation-everything(true);
+
+@import url('https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911');
+
+.container {
+  @include xy-grid-container;
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+.page-content {
+  margin-top: 30px;
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+section {
+  margin-bottom: 50px;
+}
+
+.hero-img {
+  width: 60%;
+  margin-top: 30px;
+}
+
+.meta {
+  font-size: 0.8em;
+  color: #999;
 }

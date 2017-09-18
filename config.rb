@@ -1,3 +1,8 @@
+::Sass.load_paths << File.join(root, "node_modules")
+
+set :haml, { :format => :html5 }
+set :markdown_engine, :redcarpet
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -6,7 +11,7 @@ activate :autoprefixer do |prefix|
 end
 
 # Layouts
-# https://middlemanapp.com/basics/layouts/
+# ttps://middlemanapp.com/basics/layouts/h
 
 # Per-page layout changes
 page '/*.xml', layout: false
@@ -44,3 +49,11 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :contentful do |f|
+  f.space         = {blag: 'qarwnf4u2a1e'}
+  f.access_token  = '93ec902ace1135382f942d773662f828b47a7d8755a5af186dd8e9ff7c4a8deb'
+  f.cda_query     = {}
+  f.content_types = { posts: 'post'}
+end
+

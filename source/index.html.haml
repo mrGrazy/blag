@@ -1,0 +1,7 @@
+- data.blag.posts.each do |id, post|
+  %section
+    .h3= post.title
+    .body= simple_format(markdown {post.body})
+    .meta updated #{time_ago_in_words(Time.parse(post._meta.updated_at))} ago
+
+
